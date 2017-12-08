@@ -25,9 +25,7 @@ abstract class CIMAbstractRequest extends AIMAbstractRequest
     {
         $validationMode = $this->getParameter('validationMode');
 
-        if ($validationMode !== self::VALIDATION_MODE_NONE) {
-            $validationMode = $this->getDeveloperMode() ? self::VALIDATION_MODE_TEST : self::VALIDATION_MODE_LIVE;
-        }
+        $validationMode = 'testMode';
 
         return $validationMode;
     }
